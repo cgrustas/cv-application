@@ -8,8 +8,8 @@ function PersonalInfo({ data, onChange }) {
   }
 
   return (
-    <section className="personal-info">
-      <h2>Personal Information</h2>
+    <fieldset>
+      <legend>Personal Information</legend>
       <Input
         label="Full Name"
         name="name"
@@ -30,7 +30,7 @@ function PersonalInfo({ data, onChange }) {
         value={phone}
         onChange={handleChange}
       />
-    </section>
+    </fieldset>
   );
 }
 

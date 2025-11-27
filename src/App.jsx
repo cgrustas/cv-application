@@ -129,18 +129,18 @@ function App() {
           </form>
         )}
       </section>
-      <section className="preview-section">
-        <CVPreview
-          personalInfo={personalInfo}
-          experiences={experiences}
-          educations={educations}
-        />
-        {!isEditing && (
+      {!isEditing && (
+        <section className="preview-section">
+          <CVPreview
+            personalInfo={personalInfo}
+            experiences={experiences}
+            educations={educations}
+          />
           <button type="button" onClick={() => setIsEditing(true)}>
             Edit
           </button>
-        )}
-      </section>
+        </section>
+      )}
     </div>
   );
 }

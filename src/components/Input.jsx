@@ -3,7 +3,7 @@ function Input({ label, name, id, type = "text", value, onChange }) {
 
   return (
     <div className="form-group">
-      <label htmlFor={name}>{label}</label>
+      <label htmlFor={inputId}>{label}</label>
       <input
         id={inputId}
         name={name}

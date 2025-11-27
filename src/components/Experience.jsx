@@ -38,14 +38,16 @@ function Experience({ data, onChange, onRemove }) {
         value={endDate}
         onChange={handleChange}
       />
-      <label htmlFor="job-description">Description</label>
-      <textarea
-        name="description"
-        id="job-description"
-        value={description}
-        onChange={handleChange}
-        placeholder="e.g. Welcomed customers and supported them in locating books"
-      ></textarea>
+      <div className="form-group">
+        <label htmlFor="job-description">Description</label>
+        <textarea
+          name="description"
+          id="job-description"
+          value={description}
+          onChange={handleChange}
+          placeholder="e.g. Welcomed customers and supported them in locating books"
+        ></textarea>
+      </div>
       <button type="button" onClick={onRemove}>
         Remove
       </button>

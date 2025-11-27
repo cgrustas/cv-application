@@ -3,6 +3,7 @@ import PersonalInfo from "./components/PersonalInfo.jsx";
 import Experience from "./components/Experience.jsx";
 import Education from "./components/Education.jsx";
 import CVPreview from "./components/CVPreview.jsx";
+import "./styles/styles.css";
 
 function App() {
   const [isEditing, setIsEditing] = useState(true);
@@ -93,9 +94,17 @@ function App() {
 
   return (
     <div className="app-container">
+      <header className="app-header">
+        <h1>CV Builder</h1>
+        {!isEditing && (
+          <button type="button" onClick={() => setIsEditing(true)}>
+            Edit
+          </button>
+        )}
+      </header>
       <section className="form-section">
         {isEditing && (
-          <form onSubmit={handleSubmit}>
+          <form id="cv-form" onSubmit={handleSubmit}>
             <PersonalInfo data={personalInfo} onChange={setPersonalInfo} />
             <fieldset className="experiences">
               <legend>Experience</legend>
@@ -125,7 +134,7 @@ function App() {
                 Add Education
               </button>
             </fieldset>
-            <button>Submit</button>
+            <button type="submit">Submit</button>
           </form>
         )}
       </section>
@@ -136,9 +145,6 @@ function App() {
             experiences={experiences}
             educations={educations}
           />
-          <button type="button" onClick={() => setIsEditing(true)}>
-            Edit
-          </button>
         </section>
       )}
     </div>

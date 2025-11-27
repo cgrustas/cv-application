@@ -1,9 +1,11 @@
-function Input({ label, name, type = "text", value, onChange }) {
+function Input({ label, name, id, type = "text", value, onChange }) {
+  const inputId = id || name;
+
   return (
     <div className="form-group">
       <label htmlFor={name}>{label}</label>
       <input
-        id={name}
+        id={inputId}
         name={name}
         type={type}
         value={value}

@@ -25,6 +25,7 @@ function Education({ data, onChange }) {
       <Input
         label="Start Date"
         name="startDate"
+        id="education-start-date"
         type="date"
         value={startDate}
         onChange={handleChange}
@@ -32,6 +33,7 @@ function Education({ data, onChange }) {
       <Input
         label="End Date"
         name="endDate"
+        id="education-end-date"
         type="date"
         value={endDate}
         onChange={handleChange}

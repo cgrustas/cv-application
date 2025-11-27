@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PersonalInfo from "./components/PersonalInfo.jsx";
 import Education from "./components/Education.jsx";
+import Experience from "./components/Experience.jsx";
 
 function App() {
   const [isEditing, setIsEditing] = useState(true);
@@ -12,6 +13,13 @@ function App() {
   const [education, setEducation] = useState({
     school: "",
     titleOfStudy: "",
+    startDate: "",
+    endDate: "",
+  });
+  const [experience, setExperience] = useState({
+    jobTitle: "",
+    employer: "",
+    description: "",
     startDate: "",
     endDate: "",
   });
@@ -28,6 +36,7 @@ function App() {
           <form onSubmit={handleSubmit}>
             <PersonalInfo data={personalInfo} onChange={setPersonalInfo} />
             <Education data={education} onChange={setEducation} />
+            <Experience data={experience} onChange={setExperience} />
             <button type="submit">Submit</button>
           </form>
         ) : (

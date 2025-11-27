@@ -26,7 +26,7 @@ function Experience({ data, onChange, onRemove }) {
         label="Start Date"
         name="startDate"
         id="experience-start-date"
-        type="date"
+        type="month"
         value={startDate}
         onChange={handleChange}
       />
@@ -34,7 +34,7 @@ function Experience({ data, onChange, onRemove }) {
         label="End Date"
         name="endDate"
         id="experience-end-date"
-        type="date"
+        type="month"
         value={endDate}
         onChange={handleChange}
       />

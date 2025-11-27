@@ -26,7 +26,7 @@ function Education({ data, onChange, onRemove }) {
         label="Start Date"
         name="startDate"
         id="education-start-date"
-        type="date"
+        type="month"
         value={startDate}
         onChange={handleChange}
       />
@@ -34,7 +34,7 @@ function Education({ data, onChange, onRemove }) {
         label="End Date"
         name="endDate"
         id="education-end-date"
-        type="date"
+        type="month"
         value={endDate}
         onChange={handleChange}
       />

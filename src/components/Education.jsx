@@ -1,6 +1,6 @@
 import Input from "./Input.jsx";
 
-function Education({ data, onChange }) {
+function Education({ data, onChange, onRemove }) {
   const { school, titleOfStudy, startDate, endDate } = data;
 
   function handleChange(e) {
@@ -9,7 +9,7 @@ function Education({ data, onChange }) {
 
   return (
     <fieldset>
-      <legend>Education</legend>
+      <legend>{school || "New Education"}</legend>
       <Input
         label="School"
         name="school"
@@ -38,6 +38,9 @@ function Education({ data, onChange }) {
         value={endDate}
         onChange={handleChange}
       />
+      <button type="button" onClick={onRemove}>
+        Remove
+      </button>
     </fieldset>
   );
 }

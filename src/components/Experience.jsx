@@ -1,6 +1,6 @@
 import Input from "./Input";
 
-function Experience({ data, onChange }) {
+function Experience({ data, onChange, onRemove }) {
   const { jobTitle, employer, description, startDate, endDate } = data;
 
   function handleChange(e) {
@@ -9,7 +9,7 @@ function Experience({ data, onChange }) {
 
   return (
     <fieldset>
-      <legend>Experience</legend>
+      <legend>{jobTitle || "New Position"}</legend>
       <Input
         label="Job Title"
         name="jobTitle"
@@ -46,6 +46,9 @@ function Experience({ data, onChange }) {
         onChange={handleChange}
         placeholder="e.g. Welcomed customers and supported them in locating books"
       ></textarea>
+      <button type="button" onClick={onRemove}>
+        Remove
+      </button>
     </fieldset>
   );
 }
